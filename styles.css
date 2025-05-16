@@ -7,8 +7,7 @@
     --cream: hsl(30, 38%, 92%);
     --white: hsl(0, 0%, 100%);
     /* Font variables */
-    --fontPrimary: 'Fraunces', sans-serif;
-    --fontSecondary: 'Montserrat', sans-serif;
+    --fontPrimary: 'Montserrat', sans-serif;--fontSecondary: 'Fraunces', sans-serif;
     --fontSize: 0.7rem;
 }
 
@@ -23,6 +22,7 @@ body {
     background-color: var(--cream);
     display: flex;
     flex-direction: column;
+    font-family: var(--fontPrimary);
     height: 100vh;
     justify-content: center;
 }
@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     margin: 1rem auto;
     overflow: hidden;
-    width: 343px;
+    width: 21.25rem;
 }
 
 img {
@@ -51,35 +51,33 @@ section {
 
 #product-label {
     color: var(--grey);
-    font-family: var(--fontSecondary);
     font-size: var(--fontSize);
     letter-spacing: 0.3rem;
 }
 
 h1 {
-    font-family: var(--fontPrimary);
+    color: var(--black);
+    font-family: var(--fontSecondary);
     font-size: 2rem;
 }
 
 #product-description {
     color: var(--grey);
-    font-family: var(--fontSecondary);
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5rem;
 }
 
-section div {
+#prices {
     align-items: center;
     display: flex;
-    font-family: var(--fontSecondary);
     font-size: 0.875rem;
     gap: 1rem;
 }
 
 #discounted-price {
     color: var(--green500);
-    font-family: var(--fontPrimary);
+    font-family: var(--fontSecondary);
     font-size: 2rem;
 }
 
@@ -94,11 +92,15 @@ button {
     background-color: var(--green500);
     color: var(--white);
     display: flex;
-    font-family: var(--fontSecondary);
     font-weight: 500;
     gap: 0.5rem;
     justify-content: center;
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+button:hover {
+    background-color: var(--green700);
+    cursor: pointer;
 }
 
 /* Desktop Version */
@@ -106,14 +108,14 @@ button {
     #product-container {
     align-items: center;
     flex-direction: row;
-    width: 600px;
     height: 450px;
+    width: 600px;
     }
 
     picture, section {
     flex: none;
-    width: 50%;
     height: 100%;
+    width: 50%;
     }
 
     section {
@@ -122,8 +124,8 @@ button {
     }
     
     #product-img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
+    width: 100%;
     }
 }
